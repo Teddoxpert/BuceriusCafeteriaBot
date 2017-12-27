@@ -4,7 +4,6 @@ from telegram.ext import Updater, CommandHandler, CallbackQueryHandler
 import logging
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 
-
 myToken = #insert token
 
 bot = telegram.Bot(token=myToken)
@@ -22,7 +21,6 @@ def start(bot,update):
 def menu(bot,update):
     query = update.callback_query
     bot.send_message(chat_id=query.message.chat_id, text=menuData.displayMenu(query.data))
-
 
 start_handler = CommandHandler('start', start)
 
